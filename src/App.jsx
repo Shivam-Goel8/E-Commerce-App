@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { WishlistProvider } from "./Context/WishlistContext";
 import { CartProvider } from "./Context/CartContext"; // ✅ Import CartProvider
 import Nav from "./Nav/Nav";
