@@ -10,7 +10,7 @@ const cors = require("cors")
 app.use(express.json())
 app.use(cookieParser());
 app.use(cors({
-    origin: "http://localhost:5173", // React dev server origin
+    origin: "https://e-commerce-app-backend-b9yv.onrender.com", // React dev server origin
     credentials: true,
 }));
 
