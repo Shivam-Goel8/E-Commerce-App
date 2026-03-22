@@ -1,6 +1,6 @@
 import React from "react";
 import "./Fotter.css";
-// import { FaFacebookF, FaYoutube, FaPinterestP, FaInstagram } from "react-icons/fa";
+
 
 const Footer = () => {
   return (
@@ -88,12 +88,6 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        {/* <div className="social-icons">
-          <FaFacebookF />
-          <FaYoutube />
-          <FaPinterestP />
-          <FaInstagram />
-        </div> */}
         <p>© 2024 - Ecommerce Template</p>
         <div className="payment-icons">
           <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" alt="Visa" />
