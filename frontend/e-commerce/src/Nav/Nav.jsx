@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from 'react';
 import "./Nav.css";
-import { FaSearch, FaBars } from "react-icons/fa";
+// import { FaSearch, FaBars } from "react-icons/fa";
 import CartIcon from "../CartIcon/CartIcon";
 import WishlistIcon from "../WishlistIcon/WishlistIcon";
 import axios from "axios";
@@ -46,7 +46,7 @@ function Nav() {
 
         <div className="search-bar">
           <input type="text" placeholder="Search for products..." />
-          <button><FaSearch /></button>
+          <button>🔍</button>
         </div>
 
         <div className="nav-right">
@@ -77,7 +77,7 @@ function Nav() {
         <div className="categories">CATEGORIES</div>
 
         <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
-          <FaBars />
+          ☰
         </div>
 
         <ul>
