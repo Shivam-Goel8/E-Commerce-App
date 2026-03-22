@@ -9,7 +9,7 @@ function WishlistIcon() {
 
   return (
     <div className="wishlist-icon-wrapper">
-      <FaHeart className="wishlist-icon" />
+      <span className="wishlist-icon" >❤️</span>
       {wishlist.length > 0 && (
         <span className="wishlist-count">{wishlist.length}</span>
       )}

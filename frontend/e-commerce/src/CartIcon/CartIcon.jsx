@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { CartContext } from "../Context/CartContext";
-import { FaShoppingCart } from "react-icons/fa";
+
 import "./CartIcon.css";
 
 const CartIcon = () => {
@@ -11,7 +11,7 @@ const CartIcon = () => {
 
   return (
     <div className="cart-icon">
-      <FaShoppingCart />
+     🛒
       {totalItems > 0 && <span className="cart-badge">{totalItems}</span>}
     </div>
   );
