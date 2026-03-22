@@ -1,7 +1,6 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState, useEffect } from 'react';
 import "./Nav.css";
-// import { FaSearch, FaBars } from "react-icons/fa";
 import CartIcon from "../CartIcon/CartIcon";
 import WishlistIcon from "../WishlistIcon/WishlistIcon";
 import axios from "axios";
