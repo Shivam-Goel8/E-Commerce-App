@@ -5,7 +5,7 @@ import ProductListing2 from "../ProductListing/ProductListing2"
 import ProductListing1 from "../ProductListing/ProductListing1"
 import ProductListing3 from "../ProductListing/ProductListing3"
 import ProductListing4 from "../ProductListing/ProductListing4Bag";
-import { FaRegClock } from "react-icons/fa";
+
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
@@ -186,7 +186,7 @@ const Home = () => {
               <div className="blog-img">
                 <img src={post.img} alt={post.title} />
                 <span className="blog-date">
-                  <FaRegClock /> {post.date}
+                   {post.date}
                 </span>
               </div>
               <div className="blog-content">
