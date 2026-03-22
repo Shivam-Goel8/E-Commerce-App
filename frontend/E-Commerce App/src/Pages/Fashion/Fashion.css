@@ -1,0 +1,267 @@
+.fashion-container {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+  background: #f7f8fc;
+  font-family: "Poppins", sans-serif;
+  flex-wrap: wrap; /* allow wrapping */
+}
+
+/* Left Filter */
+.filter-section {
+  width: 260px;
+  padding: 22px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+  height: fit-content;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filter-section:hover {
+  box-shadow: 0 12px 60px rgba(0, 0, 0, 0.2);
+}
+
+.filter-section h2 {
+  margin-bottom: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  color: #000;
+  letter-spacing: 1px;
+}
+
+/* Filter Item */
+.filter-item {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filter-item label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #444;
+}
+
+.filter-item input,
+.filter-item select {
+  padding: 10px;
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  font-size: 14px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s ease;
+}
+
+.filter-item input:focus,
+.filter-item select:focus {
+  transform: scale(1.03);
+  border: 2px solid #ff758c;
+  box-shadow: 0 6px 15px rgba(255, 118, 136, 0.4);
+}
+
+/* Range slider */
+.filter-item input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #ff758c, #ff7eb3, #fad0c4);
+  outline: none;
+}
+
+.filter-item input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #ff4444;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Right Products */
+.products-section {
+  flex: 1;
+}
+
+.products-section h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Product Card */
+.card {
+  position: relative;
+  background: #fff;
+  padding: 16px;
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.discount-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #ff4444;
+  color: #fff;
+  padding: 6px 10px;
+  font-size: 13px;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+.brand {
+  font-size: 14px;
+  color: #777;
+  margin: 4px 0;
+}
+
+.desc {
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+.rating {
+  color: #fbc02d;
+  margin-bottom: 8px;
+}
+
+.price {
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.price .old {
+  text-decoration: line-through;
+  color: #888;
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+.price .new {
+  color: #e53935;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.cart-btn {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ff4444;
+  border-radius: 8px;
+  background: #fff;
+  color: #ff4444;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cart-btn:hover {
+  background: #ff4444;
+  color: #fff;
+}
+
+.wishlist-btn {
+  display: none;
+  margin-top: 8px;
+  padding: 10px;
+  border-radius: 50%;
+  border: 1px solid #ffb3b3;
+  background: #ffeaea;
+  color: #ff4444;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  transition: 0.3s all ease;
+}
+
+.card:hover .wishlist-btn {
+  display: block;
+}
+
+/* --------------------
+   RESPONSIVE STYLES
+-------------------- */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .fashion-container {
+    flex-direction: column;
+  }
+
+  .filter-section {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+  }
+
+  .filter-item {
+    flex: 1;
+    min-width: 180px;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 600px) {
+  .fashion-container {
+    padding: 10px;
+  }
+
+  .filter-section {
+    padding: 15px;
+    flex-direction: column;
+    align-items: stretch;
+    width: 90%;
+  }
+
+  .filter-item {
+    width: 90%;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr; /* single column */
+  }
+
+  .card img {
+    height: 180px;
+  }
+
+  .cart-btn {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
