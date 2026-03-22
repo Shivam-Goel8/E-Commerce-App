@@ -1,6 +1,5 @@
 // src/components/WishlistIcon/WishlistIcon.jsx
 import React, { useContext } from "react";
-import { FaHeart } from "react-icons/fa";
 import { WishlistContext } from "../Context/WishlistContext"
 import "./WishlistIcon.css";
 
