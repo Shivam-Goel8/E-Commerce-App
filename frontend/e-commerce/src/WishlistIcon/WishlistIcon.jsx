@@ -1,4 +1,4 @@
-// src/components/WishlistIcon/WishlistIcon.jsx
+
 import React, { useContext } from "react";
 import { WishlistContext } from "../Context/WishlistContext"
 import "./WishlistIcon.css";
