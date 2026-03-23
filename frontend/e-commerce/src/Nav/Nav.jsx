@@ -27,13 +27,13 @@ function Nav() {
   );
 
   const logout = async () => {
-    await axios.get("http://localhost:5000/logout", {
+    await axios.get(`${import.meta.env.VITE_API_URL}/logout`, {
       withCredentials: true
     });
 
     localStorage.removeItem("user");
     setUser(null);
-    navigate("/login");
+    navigate(`${import.meta.env.VITE_API_URL}/login`);
   };
 
   return (
