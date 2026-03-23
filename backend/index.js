@@ -4,13 +4,22 @@ require("./config/db")
 const Routes = require("./routes/Authroutes")
 const cookieParser = require("cookie-parser");
 const cors = require("cors")
+require("dotenv").config();
+
+const PORT = process.env.PORT || 5000;
 
 
 // middleware
 app.use(express.json())
 app.use(cookieParser());
 app.use(cors({
-    origin: "https://e-commerce-app-backend-b9yv.onrender.com", // React dev server origin
+    origin: function (origin, callback) {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error("Not allowed by CORS"));
+        }
+    },
     credentials: true,
 }));
 
@@ -20,4 +29,4 @@ app.use("/", Routes)
 // app.use("/wishlist", Routes);
 // app.use("/order", Routes);
 
-app.listen(5000, () => console.log("Server started"))
+app.listen(PORT, () => console.log("Server started"))

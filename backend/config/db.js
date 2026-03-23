@@ -1,6 +1,8 @@
 const mongoose = require("mongoose")
+require("dotenv").config();
+const MONGO = process.env.MONGO;
 
-mongoose.connect('mongodb+srv://shivamgoel8383:c6r6L1sA6VLmYsau@cluster0.id7132s.mongodb.net/Ecommerce')
+mongoose.connect(`${MONGO}`)
     .then(() => console.log("Mongo connect At Ecommerce"))
     .catch((err) => console.log("Error", err))
 
