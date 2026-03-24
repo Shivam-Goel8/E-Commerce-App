@@ -24,7 +24,7 @@ const Login = () => {
 
         try {
             const res = await axios.post(
-                `${import.meta.env.VITE_API_URL}/login`,
+                "https://e-commerce-app-backend-b9yv.onrender.com/login",
                 form,
                 { withCredentials: true }
             );
