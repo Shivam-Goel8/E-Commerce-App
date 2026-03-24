@@ -6,6 +6,7 @@ import WishlistIcon from "../WishlistIcon/WishlistIcon";
 import axios from "axios";
 import { useContext } from "react";
 import { CartContext } from "../Context/CartContext";
+import API from "../utils";
 
 function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -27,7 +28,7 @@ function Nav() {
   );
 
   const logout = async () => {
-    await axios.post(`${import.meta.env.VITE_API_URL}/logout`, {
+    await API.post("/logout", {
       withCredentials: true
     });
 

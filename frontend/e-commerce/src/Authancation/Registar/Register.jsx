@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "../Login/Login.css";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import API from "../../utils";
 
 function Register() {
 
@@ -24,8 +25,7 @@ function Register() {
         e.preventDefault();
 
         try {
-            const res = await axios.post(
-                `${import.meta.env.VITE_API_URL}/signup`,
+            const res = await API.post("/signup",
                 form,
                 { withCredentials: true }
             );

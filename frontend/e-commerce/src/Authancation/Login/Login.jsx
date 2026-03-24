@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Login.css";
-import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
+import API from "../../utils";
 
 const Login = () => {
 
@@ -23,8 +23,7 @@ const Login = () => {
         e.preventDefault();
 
         try {
-            const res = await axios.post(
-                "https://e-commerce-app-backend-b9yv.onrender.com/login",
+            const res = await API.post("/login",
                 form,
                 { withCredentials: true }
             );
