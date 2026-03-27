@@ -70,7 +70,7 @@ const ProductSlider = () => {
     },
     {
       id: 27,
-      img: "",
+      img: "https://rukminim2.flixcart.com/image/612/612/k8ddoy80/anklet/j/d/q/2-dc-ank-10054-s-prita-original-imafqesmggyzy88a.jpeg?q=70",
       title: "Senco Gold",
       desc: "Emerald Gemstone Pendant",
       price: 4499,

@@ -33,7 +33,8 @@ function Register() {
             setMsg(res.data.msg);
 
             if (res.data.success) {
-                localStorage.setItem("user", JSON.stringify(res.data.user)); navigate("/");
+                localStorage.setItem("user", JSON.stringify(res.data.user));
+                navigate("/");
             }
 
         } catch (error) {
