@@ -45,11 +45,11 @@ export const CartProvider = ({ children }) => {
     } catch (error) {
       console.log(error);
 
-      // ✅ MAIN LOGIN CHECK
-      if (error.response?.status === 401) {
-        toast.error("Please login first ❌");
-        return;
-      }
+      // // ✅ MAIN LOGIN CHECK
+      // if (error.response?.status === 401) {
+      //   toast.error("Please login first ❌");
+      //   return;
+      // }
 
       toast.error("Server error ❌");
     }

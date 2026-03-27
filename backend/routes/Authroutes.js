@@ -99,7 +99,7 @@ router.get("/profile", PrivateRoutes, (req, res) => {
 
 
 // LOGOUT
-router.get("/logout", (req, res) => {
+router.post("/logout", (req, res) => {
     res.clearCookie("token");
     res.json({ success: true, msg: "Logged out" });
 });
@@ -135,7 +135,7 @@ router.post("/cart/add", PrivateRoutes, async (req, res) => {
         if (!productId || !name || !price) {
             return res.json({
                 success: false,
-                msg: "All fields are required",
+                msg: "Something went wrong ",
             });
         }
 

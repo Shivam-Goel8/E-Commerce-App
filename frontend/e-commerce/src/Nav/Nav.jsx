@@ -11,6 +11,7 @@ import API from "../utils";
 function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [user, setUser] = useState(null);
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -24,7 +25,7 @@ function Nav() {
 
   const totalQty = cart.reduce(
     (sum, item) => sum + item.quantity,
-    0
+[]
   );
 
   const logout = async () => {
