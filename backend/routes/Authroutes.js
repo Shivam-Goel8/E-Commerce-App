@@ -35,7 +35,8 @@ router.post("/signup", async (req, res) => {
 
         res.cookie("token", token, {
             httpOnly: true,
-            sameSite: "lax",
+            secure: true, // production me true (Render pe)
+            sameSite: "None", // 🔥 VERY IMPORTANT for cross-origin
         });
 
         res.json({
@@ -73,7 +74,8 @@ router.post("/login", async (req, res) => {
 
         res.cookie("token", token, {
             httpOnly: true,
-            sameSite: "lax",
+            secure: true, // production me true (Render pe)
+            sameSite: "None", // 🔥 VERY IMPORTANT for cross-origin
         });
 
         res.json({
