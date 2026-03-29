@@ -14,13 +14,22 @@ export const CartProvider = ({ children }) => {
       const res = await API.get("/cart");
 
       if (res.data.success) {
-        setCart(res.data.cart.products || []);
+        setCart(res.data.cart?.products || []);
+      } else {
+        setCart([]);
       }
+
     } catch (error) {
       console.log(error);
+
+      if (error.response?.status === 401) {
+        // user not logged in
+        setCart([]);
+        return;
+      }
+      ``
     }
   };
-
   useEffect(() => {
     getCart(); // 🔥 load cart on app start
   }, []);

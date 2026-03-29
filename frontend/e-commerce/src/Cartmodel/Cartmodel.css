@@ -1,0 +1,124 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* 🔥 BIG MODAL */
+.modal-box.large {
+  width: 800px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  position: relative;
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* GRID */
+.modal-grid {
+  display: flex;
+  gap: 25px;
+}
+
+/* LEFT IMAGE */
+.modal-left img {
+  width: 300px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* RIGHT SIDE */
+.modal-right {
+  flex: 1;
+}
+
+.modal-right h2 {
+  margin-bottom: 10px;
+}
+
+/* DESCRIPTION */
+.desc {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* RATING */
+.rating {
+  margin-bottom: 10px;
+  color: #f5a623;
+}
+
+/* PRICE */
+.price-box {
+  margin: 15px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.price-box .new {
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+}
+
+.price-box .old {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.price-box .discount {
+  color: green;
+  font-weight: bold;
+}
+
+/* FEATURES */
+.features {
+  margin: 15px 0;
+  padding-left: 15px;
+}
+
+.features li {
+  margin-bottom: 5px;
+}
+
+/* BUTTONS */
+.modal-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.modal-buttons button {
+  padding: 10px 14px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.go-cart {
+  background: orange;
+  color: white;
+}
+
+.buy-now {
+  background: green;
+  color: white;
+}

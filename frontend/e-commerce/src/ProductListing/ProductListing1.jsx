@@ -2,10 +2,17 @@ import React, { useState, useContext } from "react";
 import { CartContext } from "../Context/CartContext";
 import { WishlistContext } from "../Context/WishlistContext";
 import "./ProductListing.css";
+import CartModal from "../Cartmodel/Cartmodel";
 
 const ProductSlider = () => {
   const { addToCart } = useContext(CartContext);
   const { addToWishlist } = useContext(WishlistContext);
+
+  const [index, setIndex] = useState(0);
+  const [showModal, setShowModal] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+
+  const visibleCards = 5;
 
   const products = [
     {
@@ -99,8 +106,6 @@ const ProductSlider = () => {
       rating: 4.7,
     },
   ];
-  const [index, setIndex] = useState(0);
-  const visibleCards = 5;
 
   const nextSlide = () => {
     if (index < products.length - visibleCards) setIndex(index + 1);
@@ -143,21 +148,27 @@ const ProductSlider = () => {
                   <span className="new">₹{item.price}</span>
                 </div>
 
-                {/* 🔥 FIX HERE */}
+                {/* ✅ ADD TO CART */}
                 <button
                   className="cart-btn"
-                  onClick={() =>
-                    addToCart({
-                      _id: item.id,        // ✅ convert
-                      name: item.title,   // ✅ convert
+                  onClick={() => {
+                    const productData = {
+                      _id: item.id,
+                      name: item.title,
                       price: item.price,
                       img: item.img,
-                    })
-                  }
+                    };
+
+                    addToCart(productData);
+
+                    setSelectedProduct(productData);
+                    setShowModal(true);
+                  }}
                 >
                   🛒 ADD TO CART
                 </button>
 
+                {/* ❤️ WISHLIST */}
                 <button
                   className="wish-btn"
                   onClick={() =>
@@ -184,6 +195,14 @@ const ProductSlider = () => {
           ❯
         </button>
       </div>
+
+      {/* ✅ MODAL */}
+      {showModal && (
+        <CartModal
+          product={selectedProduct}
+          onClose={() => setShowModal(false)}
+        />
+      )}
     </div>
   );
 };
