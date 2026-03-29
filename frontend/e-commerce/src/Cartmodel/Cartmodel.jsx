@@ -2,7 +2,7 @@ import React from "react";
 import "./CartModel.css";
 import { useNavigate } from "react-router-dom";
 
-const CartModal = ({ product, onClose }) => {
+const CartModel = ({ product, onClose }) => {
     const navigate = useNavigate();
 
     if (!product) return null;
@@ -71,4 +71,4 @@ const CartModal = ({ product, onClose }) => {
     );
 };
 
-export default CartModal;
+export default CartModel;
